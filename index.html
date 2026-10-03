@@ -1,0 +1,3379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jai Shree Tiles & Sanitary | Premium Tiles & Sanitaryware</title>
+
+<meta name="description"
+content="Jai Shree Tiles & Sanitary — Premium Wall & Floor Tiles, Vitrified Tiles, Sanitary Ware and Tile Adhesive. Crafting Elegance for Your Home.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --black:#10100f;
+    --deep:#151513;
+    --charcoal:#1d1c19;
+    --cream:#f4efe6;
+    --ivory:#fffdf8;
+    --gold:#c9a45b;
+    --gold-light:#e0c481;
+    --brown:#76583b;
+    --muted:#a9a39a;
+    --border:rgba(255,255,255,.10);
+    --white:#ffffff;
+
+    --serif:"Playfair Display",serif;
+    --sans:"DM Sans",sans-serif;
+
+    --container:1240px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--sans);
+    background:var(--ivory);
+    color:#191816;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+button{
+    border:0;
+    cursor:pointer;
+}
+
+::selection{
+    background:var(--gold);
+    color:#111;
+}
+
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+.preloader{
+    position:fixed;
+    inset:0;
+    background:var(--black);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:99999;
+    transition:.7s ease;
+}
+
+.preloader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-logo{
+    width:105px;
+    height:105px;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-family:var(--serif);
+    font-size:28px;
+    position:relative;
+    animation:logoPulse 1.5s infinite;
+}
+
+.loader-logo::after{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px dashed rgba(201,164,91,.5);
+    border-radius:50%;
+}
+
+@keyframes logoPulse{
+    50%{transform:scale(1.04)}
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:5000;
+    padding:20px 0;
+    transition:.4s ease;
+}
+
+.navbar.scrolled{
+    background:rgba(16,16,15,.92);
+    backdrop-filter:blur(18px);
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+    max-width:var(--container);
+    margin:auto;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-mark{
+    width:46px;
+    height:46px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:17px;
+}
+
+.brand-name{
+    color:white;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.brand-sub{
+    color:var(--gold-light);
+    font-size:9px;
+    letter-spacing:.18em;
+    margin-top:2px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.nav-links a{
+    color:rgba(255,255,255,.85);
+    font-size:13px;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:1px;
+    background:var(--gold);
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold-light);
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-cta{
+    padding:12px 20px;
+    background:var(--gold);
+    color:#17130d!important;
+    border-radius:30px;
+    font-weight:700!important;
+}
+
+.nav-cta::after{
+    display:none;
+}
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:22px;
+    background:none;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    background:#111;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,rgba(8,8,7,.88),rgba(8,8,7,.52),rgba(8,8,7,.25)),
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=90")
+        center/cover;
+    transform:scale(1.04);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(180deg,rgba(0,0,0,.35),transparent 45%,rgba(0,0,0,.55));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:var(--container);
+    width:100%;
+    margin:auto;
+    padding:140px 25px 80px;
+}
+
+.hero-copy{
+    max-width:720px;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--gold-light);
+    font-size:11px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.eyebrow::before{
+    content:"";
+    width:38px;
+    height:1px;
+    background:var(--gold);
+}
+
+.hero h1{
+    font-family:var(--serif);
+    color:white;
+    font-size:clamp(48px,7vw,88px);
+    line-height:1.03;
+    font-weight:500;
+}
+
+.hero h1 span{
+    color:var(--gold-light);
+}
+
+.hero-tagline{
+    margin-top:26px;
+    color:rgba(255,255,255,.76);
+    font-size:18px;
+    max-width:570px;
+    line-height:1.8;
+}
+
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:35px;
+}
+
+.btn{
+    min-height:52px;
+    padding:0 25px;
+    border-radius:50px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    font-size:13px;
+    font-weight:700;
+    transition:.35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#17130d;
+}
+
+.btn-primary:hover{
+    background:var(--gold-light);
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(201,164,91,.22);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(10px);
+}
+
+.btn-outline:hover{
+    border-color:var(--gold);
+    color:var(--gold-light);
+    transform:translateY(-4px);
+}
+
+.hero-bottom{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:4;
+    color:rgba(255,255,255,.65);
+    font-size:10px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.scroll-line{
+    width:1px;
+    height:45px;
+    background:linear-gradient(var(--gold),transparent);
+}
+
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust-strip{
+    background:var(--black);
+    color:white;
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.trust-inner{
+    max-width:var(--container);
+    margin:auto;
+    padding:25px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.trust-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    text-align:center;
+}
+
+.trust-item i{
+    color:var(--gold);
+    font-size:18px;
+}
+
+.trust-item span{
+    font-size:11px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:#d6d0c7;
+}
+
+/* =========================================================
+   GLOBAL SECTIONS
+========================================================= */
+
+section{
+    padding:110px 0;
+}
+
+.container{
+    max-width:var(--container);
+    margin:auto;
+    padding:0 25px;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 60px;
+}
+
+.section-kicker{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.section-heading h2{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(36px,5vw,58px);
+    line-height:1.1;
+    color:#191816;
+}
+
+.section-heading p{
+    color:#77736c;
+    line-height:1.8;
+    margin-top:18px;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    background:var(--cream);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:75px;
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    height:620px;
+    object-fit:cover;
+}
+
+.about-image::after{
+    content:"";
+    position:absolute;
+    width:170px;
+    height:170px;
+    right:-25px;
+    bottom:-25px;
+    border:1px solid var(--gold);
+    z-index:0;
+}
+
+.about-image img{
+    position:relative;
+    z-index:1;
+}
+
+.about-copy .section-kicker{
+    margin-bottom:15px;
+}
+
+.about-copy h3{
+    font-family:var(--serif);
+    font-size:42px;
+    font-weight:500;
+    line-height:1.15;
+}
+
+.about-copy p{
+    color:#6e6a63;
+    line-height:1.9;
+    margin-top:20px;
+}
+
+.about-list{
+    margin-top:30px;
+    display:grid;
+    gap:14px;
+}
+
+.about-list li{
+    list-style:none;
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    color:#37342f;
+    font-size:14px;
+}
+
+.about-list i{
+    color:var(--gold);
+    margin-top:4px;
+}
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products{
+    background:#fff;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product-card{
+    position:relative;
+    background:#f7f4ed;
+    overflow:hidden;
+    min-height:430px;
+    transition:.45s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-9px);
+    box-shadow:0 25px 60px rgba(20,18,14,.12);
+}
+
+.product-image{
+    height:310px;
+    overflow:hidden;
+}
+
+.product-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.7s ease;
+}
+
+.product-card:hover .product-image img{
+    transform:scale(1.07);
+}
+
+.product-info{
+    padding:23px;
+}
+
+.product-number{
+    font-size:10px;
+    color:var(--gold);
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+
+.product-info h3{
+    font-family:var(--serif);
+    font-size:24px;
+    font-weight:500;
+    margin-top:7px;
+}
+
+.product-info p{
+    color:#7c7770;
+    font-size:12px;
+    line-height:1.6;
+    margin-top:8px;
+}
+
+/* =========================================================
+   SHOWCASE / VSL
+========================================================= */
+
+.showcase{
+    background:var(--black);
+    color:white;
+}
+
+.showcase .section-heading h2{
+    color:white;
+}
+
+.showcase .section-heading p{
+    color:#aaa59d;
+}
+
+.showcase-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:22px;
+}
+
+.showcase-main{
+    min-height:580px;
+    position:relative;
+    overflow:hidden;
+}
+
+.showcase-main img{
+    height:100%;
+    object-fit:cover;
+}
+
+.showcase-main::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 40%,rgba(0,0,0,.8));
+}
+
+.showcase-content{
+    position:absolute;
+    bottom:35px;
+    left:35px;
+    right:35px;
+    z-index:2;
+}
+
+.showcase-content h3{
+    font-family:var(--serif);
+    font-size:38px;
+    font-weight:500;
+}
+
+.showcase-content p{
+    color:#d0cbc2;
+    margin-top:8px;
+    line-height:1.7;
+}
+
+.play-button{
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#17130d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:22px;
+    font-size:18px;
+}
+
+.showcase-side{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    gap:22px;
+}
+
+.showcase-small{
+    position:relative;
+    overflow:hidden;
+}
+
+.showcase-small img{
+    height:100%;
+    min-height:279px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.showcase-small:hover img{
+    transform:scale(1.06);
+}
+
+.small-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 35%,rgba(0,0,0,.8));
+    display:flex;
+    align-items:flex-end;
+    padding:25px;
+}
+
+.small-overlay h4{
+    font-family:var(--serif);
+    font-size:25px;
+}
+
+/* =========================================================
+   COLLECTIONS
+========================================================= */
+
+.collections{
+    background:var(--cream);
+}
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.collection-card{
+    position:relative;
+    height:480px;
+    overflow:hidden;
+}
+
+.collection-card img{
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
+}
+
+.collection-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 30%,rgba(0,0,0,.8));
+}
+
+.collection-card:hover img{
+    transform:scale(1.06);
+}
+
+.collection-content{
+    position:absolute;
+    left:28px;
+    right:28px;
+    bottom:27px;
+    z-index:2;
+    color:white;
+}
+
+.collection-content span{
+    font-size:10px;
+    color:var(--gold-light);
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+
+.collection-content h3{
+    font-family:var(--serif);
+    font-size:30px;
+    font-weight:500;
+    margin-top:5px;
+}
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process{
+    background:#fff;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    border-top:1px solid #ddd6c9;
+    border-bottom:1px solid #ddd6c9;
+}
+
+.process-item{
+    padding:40px 28px;
+    border-right:1px solid #ddd6c9;
+}
+
+.process-item:last-child{
+    border-right:0;
+}
+
+.process-number{
+    color:var(--gold);
+    font-family:var(--serif);
+    font-size:34px;
+}
+
+.process-item h3{
+    margin-top:15px;
+    font-family:var(--serif);
+    font-size:23px;
+}
+
+.process-item p{
+    margin-top:10px;
+    color:#77736c;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
+    background:#f7f4ed;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    grid-template-rows:280px 280px;
+    gap:14px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    position:relative;
+}
+
+.gallery-item:first-child{
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+.gallery-label{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+    background:rgba(0,0,0,.65);
+    color:white;
+    padding:8px 12px;
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews{
+    background:var(--black);
+}
+
+.reviews .section-heading h2{
+    color:white;
+}
+
+.reviews .section-heading p{
+    color:#aaa59d;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    border:1px solid rgba(255,255,255,.1);
+    padding:35px;
+    background:rgba(255,255,255,.025);
+}
+
+.stars{
+    color:var(--gold);
+    letter-spacing:3px;
+}
+
+.review p{
+    color:#d1ccc4;
+    line-height:1.8;
+    margin-top:20px;
+    font-family:var(--serif);
+    font-size:18px;
+}
+
+.review-author{
+    margin-top:25px;
+    color:#99948d;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq{
+    background:var(--cream);
+}
+
+.faq-list{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    border-top:1px solid #d6cebf;
+}
+
+.faq-item:last-child{
+    border-bottom:1px solid #d6cebf;
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:24px 0;
+    text-align:left;
+    font-family:var(--serif);
+    font-size:20px;
+    color:#25221d;
+}
+
+.faq-question i{
+    color:var(--gold);
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.4s ease;
+}
+
+.faq-answer p{
+    padding:0 40px 24px 0;
+    color:#77736c;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:200px;
+}
+
+.faq-item.active .faq-question i{
+    transform:rotate(45deg);
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location{
+    background:#fff;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:25px;
+}
+
+.location-info{
+    background:var(--black);
+    color:white;
+    padding:50px;
+}
+
+.location-info h3{
+    font-family:var(--serif);
+    font-size:38px;
+    font-weight:500;
+}
+
+.location-info p{
+    color:#aaa59d;
+    line-height:1.8;
+    margin-top:15px;
+}
+
+.contact-line{
+    display:flex;
+    gap:15px;
+    margin-top:28px;
+    align-items:flex-start;
+}
+
+.contact-line i{
+    color:var(--gold);
+    width:20px;
+    margin-top:4px;
+}
+
+.contact-line span{
+    color:#ddd7cf;
+    line-height:1.5;
+    font-size:14px;
+}
+
+.map{
+    min-height:450px;
+}
+
+.map iframe{
+    width:100%;
+    height:100%;
+    min-height:450px;
+    border:0;
+    filter:grayscale(.8);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    background:var(--cream);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.contact-copy h2{
+    font-family:var(--serif);
+    font-size:54px;
+    line-height:1.08;
+    font-weight:500;
+}
+
+.contact-copy p{
+    color:#77736c;
+    line-height:1.8;
+    margin-top:20px;
+}
+
+.contact-form{
+    background:white;
+    padding:38px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    margin-bottom:8px;
+    color:#6e6a63;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    border:1px solid #ded8cd;
+    padding:14px 15px;
+    outline:none;
+    background:#fff;
+    color:#222;
+    transition:.3s;
+}
+
+.form-group textarea{
+    height:120px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:var(--gold);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#0b0b0a;
+    color:white;
+    padding:70px 0 25px;
+}
+
+.footer-grid{
+    max-width:var(--container);
+    margin:auto;
+    padding:0 25px;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-brand p{
+    color:#8f8b84;
+    line-height:1.8;
+    font-size:13px;
+    max-width:350px;
+    margin-top:18px;
+}
+
+.footer-title{
+    color:var(--gold-light);
+    font-size:11px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.footer-links{
+    display:grid;
+    gap:12px;
+}
+
+.footer-links a{
+    color:#aaa59d;
+    font-size:13px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:var(--gold);
+}
+
+.socials{
+    display:flex;
+    gap:10px;
+    margin-top:22px;
+}
+
+.socials a{
+    width:40px;
+    height:40px;
+    border:1px solid rgba(255,255,255,.14);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:#ddd;
+    transition:.3s;
+}
+
+.socials a:hover{
+    color:#111;
+    background:var(--gold);
+    border-color:var(--gold);
+    transform:translateY(-3px);
+}
+
+.footer-bottom{
+    max-width:var(--container);
+    margin:55px auto 0;
+    padding:20px 25px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    color:#68655f;
+    font-size:11px;
+}
+
+.marwar{
+    color:var(--gold);
+}
+
+/* =========================================================
+   FLOATING BUTTONS
+========================================================= */
+
+.float-actions{
+    position:fixed;
+    right:20px;
+    bottom:22px;
+    z-index:4000;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.float-btn{
+    width:53px;
+    height:53px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    transition:.3s;
+    font-size:20px;
+}
+
+.float-btn:hover{
+    transform:scale(1.1) translateY(-3px);
+}
+
+.float-call{
+    background:#222;
+    border:1px solid var(--gold);
+}
+
+.float-whatsapp{
+    background:#25d366;
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu{
+    position:fixed;
+    inset:0;
+    background:#11110f;
+    z-index:4500;
+    transform:translateX(100%);
+    transition:.45s ease;
+    padding:100px 30px 30px;
+}
+
+.mobile-menu.active{
+    transform:translateX(0);
+}
+
+.mobile-close{
+    position:absolute;
+    top:25px;
+    right:25px;
+    background:none;
+    color:white;
+    font-size:25px;
+}
+
+.mobile-links{
+    display:grid;
+    gap:10px;
+}
+
+.mobile-links a{
+    color:white;
+    font-family:var(--serif);
+    font-size:30px;
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.mobile-links a:hover{
+    color:var(--gold);
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:opacity .8s ease, transform .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        gap:18px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-item:nth-child(2){
+        border-right:0;
+    }
+
+    .process-item:nth-child(-n+2){
+        border-bottom:1px solid #ddd6c9;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:800px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-content{
+        padding-top:140px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero-tagline{
+        font-size:16px;
+    }
+
+    .trust-inner{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .showcase-grid,
+    .contact-grid,
+    .location-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-image img{
+        height:480px;
+    }
+
+    .showcase-main{
+        min-height:480px;
+    }
+
+    .showcase-side{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:1fr;
+    }
+
+    .showcase-small img{
+        min-height:250px;
+    }
+
+    .collection-grid{
+        grid-template-columns:1fr;
+    }
+
+    .collection-card{
+        height:430px;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-copy h2{
+        font-size:43px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:260px 220px 220px;
+    }
+
+    .gallery-item:first-child{
+        grid-row:span 1;
+        grid-column:span 2;
+    }
+
+    .gallery-item img{
+        height:100%;
+    }
+}
+
+@media(max-width:560px){
+
+    .nav-inner{
+        padding:0 18px;
+    }
+
+    .brand-name{
+        font-size:11px;
+    }
+
+    .brand-sub{
+        font-size:7px;
+    }
+
+    .brand-mark{
+        width:40px;
+        height:40px;
+    }
+
+    .hero-content{
+        padding:130px 20px 80px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero-tagline{
+        font-size:14px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .trust-inner{
+        grid-template-columns:1fr 1fr;
+        padding:20px 15px;
+    }
+
+    .trust-item{
+        flex-direction:column;
+        gap:6px;
+    }
+
+    .trust-item span{
+        font-size:8px;
+    }
+
+    .container{
+        padding:0 18px;
+    }
+
+    .section-heading{
+        margin-bottom:40px;
+    }
+
+    .section-heading h2{
+        font-size:38px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:280px;
+    }
+
+    .showcase-side{
+        grid-template-columns:1fr;
+    }
+
+    .showcase-small img{
+        min-height:270px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-item{
+        border-right:0;
+        border-bottom:1px solid #ddd6c9;
+    }
+
+    .process-item:last-child{
+        border-bottom:0;
+    }
+
+    .gallery-grid{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+    }
+
+    .gallery-item,
+    .gallery-item:first-child{
+        grid-column:auto;
+        grid-row:auto;
+        height:280px;
+    }
+
+    .location-info{
+        padding:35px 25px;
+    }
+
+    .location-info h3{
+        font-size:32px;
+    }
+
+    .contact-form{
+        padding:25px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .float-actions{
+        right:14px;
+        bottom:14px;
+    }
+
+    .float-btn{
+        width:48px;
+        height:48px;
+        font-size:18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     PRELOADER
+========================================================= -->
+
+<div class="preloader" id="preloader">
+    <div class="loader-logo">JST</div>
+</div>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-inner">
+
+        <a href="#home" class="brand">
+
+            <div class="brand-mark">
+                JST
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    Jai Shree Tiles
+                </div>
+
+                <div class="brand-sub">
+                    Tiles & Sanitary
+                </div>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#showcase">Showcase</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="nav-cta">
+                Enquire Now
+            </a>
+
+        </nav>
+
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-close" id="mobileClose">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <nav class="mobile-links">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</div>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-copy reveal">
+
+            <div class="eyebrow">
+                Premium Tiles & Sanitaryware
+            </div>
+
+            <h1>
+                Spaces Made
+                <span>Beautiful.</span>
+            </h1>
+
+            <p class="hero-tagline">
+                Crafting Elegance for Your Home.
+                Discover premium wall and floor tiles,
+                vitrified tiles, sanitary ware and tile
+                adhesive for modern spaces.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#products"
+                   class="btn btn-primary magnetic">
+                    Explore Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="https://wa.me/918469245000?text=Hello%20Jai%20Shree%20Tiles%20%26%20Sanitary%2C%20I%20want%20to%20know%20about%20your%20products."
+                   target="_blank"
+                   class="btn btn-outline magnetic">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-bottom">
+        Discover More
+        <div class="scroll-line"></div>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRUST STRIP
+========================================================= -->
+
+<div class="trust-strip">
+
+    <div class="trust-inner">
+
+        <div class="trust-item">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Wall & Floor Tiles</span>
+        </div>
+
+        <div class="trust-item">
+            <i class="fa-solid fa-gem"></i>
+            <span>Vitrified Tiles</span>
+        </div>
+
+        <div class="trust-item">
+            <i class="fa-solid fa-bath"></i>
+            <span>Sanitary Ware</span>
+        </div>
+
+        <div class="trust-item">
+            <i class="fa-solid fa-cubes"></i>
+            <span>Tile Adhesive</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=90"
+                alt="Premium bathroom tiles and sanitaryware">
+
+            </div>
+
+
+            <div class="about-copy reveal">
+
+                <div class="section-kicker">
+                    About Jai Shree
+                </div>
+
+                <h3>
+                    Beautiful surfaces.
+                    Thoughtful spaces.
+                </h3>
+
+                <p>
+                    Jai Shree Tiles & Sanitary brings together
+                    carefully selected tiles, vitrified surfaces,
+                    sanitary ware and tile adhesive for homes and
+                    commercial spaces.
+                </p>
+
+                <p>
+                    From elegant floors to contemporary bathrooms,
+                    our collection is designed to help you create
+                    spaces that look refined and feel timeless.
+                </p>
+
+
+                <ul class="about-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Premium Wall & Floor Tiles
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Modern Vitrified Tile Collections
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Contemporary Sanitary Ware
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Reliable Tile Adhesive Solutions
+                    </li>
+
+                </ul>
+
+
+                <div style="margin-top:32px">
+
+                    <a href="#contact"
+                       class="btn btn-primary magnetic">
+                        Talk To Us
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
+
+<section class="products" id="products">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                Our Collection
+            </div>
+
+            <h2>
+                Products Designed
+                for Modern Living
+            </h2>
+
+            <p>
+                Explore our core product categories for
+                residential and commercial spaces.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <!-- PRODUCT 01 -->
+
+            <article class="product-card reveal">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=90"
+                    alt="Premium wall tiles">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-number">
+                        Collection 01
+                    </div>
+
+                    <h3>
+                        Wall Tiles
+                    </h3>
+
+                    <p>
+                        Elegant surfaces for bathrooms,
+                        kitchens and feature walls.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 02 -->
+
+            <article class="product-card reveal">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=90"
+                    alt="Floor tile interior">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-number">
+                        Collection 02
+                    </div>
+
+                    <h3>
+                        Floor Tiles
+                    </h3>
+
+                    <p>
+                        Durable and sophisticated flooring
+                        solutions for everyday spaces.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 03 -->
+
+            <article class="product-card reveal">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=90"
+                    alt="Vitrified tile bathroom">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-number">
+                        Collection 03
+                    </div>
+
+                    <h3>
+                        Vitrified Tiles
+                    </h3>
+
+                    <p>
+                        Contemporary finishes for refined
+                        residential and commercial interiors.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 04 -->
+
+            <article class="product-card reveal">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=90"
+                    alt="Premium sanitaryware bathroom">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-number">
+                        Collection 04
+                    </div>
+
+                    <h3>
+                        Sanitary Ware
+                    </h3>
+
+                    <p>
+                        Modern bathroom essentials with
+                        elegant forms and clean finishes.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ADHESIVE FEATURE -->
+
+        <div class="reveal"
+             style="
+             margin-top:22px;
+             padding:35px;
+             background:#171715;
+             color:white;
+             display:flex;
+             align-items:center;
+             justify-content:space-between;
+             gap:30px;
+             flex-wrap:wrap;
+             ">
+
+            <div>
+
+                <div style="
+                    color:#c9a45b;
+                    font-size:10px;
+                    letter-spacing:.18em;
+                    text-transform:uppercase;
+                ">
+                    Complete Your Installation
+                </div>
+
+                <h3 style="
+                    font-family:var(--serif);
+                    font-size:30px;
+                    font-weight:500;
+                    margin-top:6px;
+                ">
+                    Tile Adhesive
+                </h3>
+
+            </div>
+
+            <a href="#contact"
+               class="btn btn-primary magnetic">
+                Enquire Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VSL / SHOWCASE
+========================================================= -->
+
+<section class="showcase" id="showcase">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                Visual Showcase
+            </div>
+
+            <h2>
+                See The Difference
+            </h2>
+
+            <p>
+                Premium surfaces and sanitaryware come together
+                to create interiors that feel timeless.
+            </p>
+
+        </div>
+
+
+        <div class="showcase-grid">
+
+            <div class="showcase-main reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1500&q=90"
+                alt="Luxury tiled bathroom interior">
+
+                <div class="showcase-content">
+
+                    <a
+                    href="https://www.instagram.com/jaishreetilesandsanitary/"
+                    target="_blank"
+                    class="play-button magnetic"
+                    aria-label="Watch on Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <h3>
+                        Inspiration For Your Next Space
+                    </h3>
+
+                    <p>
+                        Explore more tile, bathroom and
+                        sanitaryware inspiration on our Instagram.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="showcase-side">
+
+                <div class="showcase-small reveal">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1584622781867-2f8a5a1c9b56?auto=format&fit=crop&w=1000&q=90"
+                    alt="Modern bathroom tiles">
+
+                    <div class="small-overlay">
+                        <h4>
+                            Modern Bathrooms
+                        </h4>
+                    </div>
+
+                </div>
+
+
+                <div class="showcase-small reveal">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=90"
+                    alt="Elegant interior tile finish">
+
+                    <div class="small-overlay">
+                        <h4>
+                            Refined Finishes
+                        </h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COLLECTIONS
+========================================================= -->
+
+<section class="collections">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                Designed For Every Space
+            </div>
+
+            <h2>
+                Choose Your Style
+            </h2>
+
+            <p>
+                From minimal bathrooms to luxurious living
+                spaces, build an interior around your personality.
+            </p>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+            <div class="collection-card reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=90"
+                alt="Luxury bathroom design">
+
+                <div class="collection-content">
+
+                    <span>
+                        Collection
+                    </span>
+
+                    <h3>
+                        Luxury Bathrooms
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="collection-card reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90"
+                alt="Modern tiled interior">
+
+                <div class="collection-content">
+
+                    <span>
+                        Collection
+                    </span>
+
+                    <h3>
+                        Modern Interiors
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="collection-card reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90"
+                alt="Premium floor and wall tiles">
+
+                <div class="collection-content">
+
+                    <span>
+                        Collection
+                    </span>
+
+                    <h3>
+                        Elegant Surfaces
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                Simple Experience
+            </div>
+
+            <h2>
+                From Selection To Space
+            </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-item reveal">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <p>
+                    Browse our tile, vitrified and
+                    sanitaryware categories.
+                </p>
+
+            </div>
+
+
+            <div class="process-item reveal">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Select
+                </h3>
+
+                <p>
+                    Choose colours, textures,
+                    finishes and styles for your space.
+                </p>
+
+            </div>
+
+
+            <div class="process-item reveal">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Enquire
+                </h3>
+
+                <p>
+                    Contact our team for product
+                    details and availability.
+                </p>
+
+            </div>
+
+
+            <div class="process-item reveal">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Create
+                </h3>
+
+                <p>
+                    Bring your chosen surfaces and
+                    sanitaryware into your space.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="gallery" id="gallery">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                Gallery
+            </div>
+
+            <h2>
+                Spaces Worth Looking At
+            </h2>
+
+            <p>
+                A visual collection inspired by premium
+                tile and sanitaryware applications.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90"
+                alt="Premium bathroom interior">
+
+                <div class="gallery-label">
+                    Bathroom
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=90"
+                alt="Contemporary bathroom">
+
+                <div class="gallery-label">
+                    Sanitaryware
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1584622781867-2f8a5a1c9b56?auto=format&fit=crop&w=1000&q=90"
+                alt="Modern tiled bathroom">
+
+                <div class="gallery-label">
+                    Tiles
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=90"
+                alt="Modern interior surfaces">
+
+                <div class="gallery-label">
+                    Interiors
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=90"
+                alt="Floor tile interior">
+
+                <div class="gallery-label">
+                    Flooring
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     REVIEWS
+========================================================= -->
+
+<section class="reviews">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                Customer Experience
+            </div>
+
+            <h2>
+                Made For Beautiful Homes
+            </h2>
+
+            <p>
+                Premium presentation, practical choices and
+                products selected for modern spaces.
+            </p>
+
+        </div>
+
+
+        <div class="review-grid">
+
+            <div class="review reveal">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “A thoughtfully selected range makes it
+                    easier to compare styles for different
+                    rooms and interiors.”
+                </p>
+
+                <div class="review-author">
+                    Customer Experience
+                </div>
+
+            </div>
+
+
+            <div class="review reveal">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “From flooring to bathroom essentials,
+                    everything can be planned around one
+                    coordinated interior style.”
+                </p>
+
+                <div class="review-author">
+                    Customer Experience
+                </div>
+
+            </div>
+
+
+            <div class="review reveal">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Modern designs and premium finishes help
+                    transform an ordinary space into something
+                    much more refined.”
+                </p>
+
+                <div class="review-author">
+                    Customer Experience
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="faq" id="faq">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                FAQ
+            </div>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+            <p>
+                Everything you may want to know before
+                choosing your tiles and sanitaryware.
+            </p>
+
+        </div>
+
+
+        <div class="faq-list">
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    What products do you offer?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Jai Shree Tiles & Sanitary offers
+                        Wall Tiles, Floor Tiles, Vitrified Tiles,
+                        Sanitary Ware and Tile Adhesive.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    Do you have both wall and floor tiles?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. The collection includes options
+                        for wall and floor applications.
+                        Contact us for current designs and availability.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    Do you provide sanitaryware?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. Sanitary ware is one of the core
+                        product categories of Jai Shree Tiles
+                        & Sanitary.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    How can I enquire about a product?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        You can call us directly or use the
+                        WhatsApp button to send your enquiry.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    Where are you located?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        The Instagram profile identifies
+                        Durgapuri as the business location.
+                        Please contact us to confirm the exact
+                        showroom address before visiting.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOCATION
+========================================================= -->
+
+<section class="location" id="location">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-kicker">
+                Visit Us
+            </div>
+
+            <h2>
+                Find Jai Shree
+            </h2>
+
+            <p>
+                Connect with us for product information,
+                availability and showroom enquiries.
+            </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+            <div class="location-info reveal">
+
+                <h3>
+                    Jai Shree Tiles
+                    & Sanitary
+                </h3>
+
+                <p>
+                    Premium tiles and sanitaryware for
+                    beautiful residential and commercial spaces.
+                </p>
+
+
+                <div class="contact-line">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Durgapuri
+                    </span>
+
+                </div>
+
+
+                <div class="contact-line">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 84692 45000
+                    </span>
+
+                </div>
+
+
+                <div class="contact-line">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    <span>
+                        @jaishreetilesandsanitary
+                    </span>
+
+                </div>
+
+
+                <div style="margin-top:35px">
+
+                    <a href="tel:+918469245000"
+                       class="btn btn-primary magnetic">
+                        <i class="fa-solid fa-phone"></i>
+                        Call Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="map reveal">
+
+                <iframe
+                src="https://www.google.com/maps?q=Durgapuri%20India&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div class="contact-copy reveal">
+
+                <div class="section-kicker">
+                    Start Your Project
+                </div>
+
+                <h2>
+                    Let's Create
+                    Something Beautiful.
+                </h2>
+
+                <p>
+                    Tell us what you are looking for —
+                    tiles, vitrified tiles, sanitaryware or
+                    tile adhesive — and connect with our team.
+                </p>
+
+
+                <div style="margin-top:30px">
+
+                    <a href="https://www.instagram.com/jaishreetilesandsanitary/"
+                       target="_blank"
+                       class="btn btn-outline magnetic"
+                       style="
+                       color:#17130d;
+                       border-color:#b7ae9f;
+                       background:white;
+                       ">
+
+                        <i class="fa-brands fa-instagram"></i>
+                        Follow On Instagram
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form reveal" id="contactForm">
+
+                <div class="form-group">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Product Requirement
+                    </label>
+
+                    <input
+                    type="text"
+                    id="requirement"
+                    placeholder="Tiles / Vitrified / Sanitaryware / Adhesive"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Message
+                    </label>
+
+                    <textarea
+                    id="message"
+                    placeholder="Tell us what you need..."></textarea>
+
+                </div>
+
+
+                <button
+                type="submit"
+                class="btn btn-primary magnetic"
+                style="width:100%">
+
+                    Send Enquiry On WhatsApp
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="brand">
+
+                <div class="brand-mark">
+                    JST
+                </div>
+
+                <div>
+
+                    <div class="brand-name">
+                        Jai Shree Tiles
+                    </div>
+
+                    <div class="brand-sub">
+                        Tiles & Sanitary
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <p>
+                Premium wall and floor tiles, vitrified tiles,
+                sanitary ware and tile adhesive.
+                Crafting Elegance for Your Home.
+            </p>
+
+
+            <div class="socials">
+
+                <a
+                href="https://www.instagram.com/jaishreetilesandsanitary/"
+                target="_blank"
+                aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <a
+                href="https://wa.me/918469245000"
+                target="_blank"
+                aria-label="WhatsApp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
+
+
+                <a
+                href="tel:+918469245000"
+                aria-label="Call">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Explore
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#gallery">Gallery</a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Products
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#products">Wall Tiles</a>
+                <a href="#products">Floor Tiles</a>
+                <a href="#products">Vitrified Tiles</a>
+                <a href="#products">Sanitary Ware</a>
+                <a href="#products">Tile Adhesive</a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Contact
+            </div>
+
+            <div class="footer-links">
+
+                <a href="tel:+918469245000">
+                    +91 84692 45000
+                </a>
+
+                <a href="https://wa.me/918469245000"
+                   target="_blank">
+                    WhatsApp
+                </a>
+
+                <a href="https://www.instagram.com/jaishreetilesandsanitary/"
+                   target="_blank">
+                    Instagram
+                </a>
+
+                <a href="#location">
+                    Durgapuri
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © <span id="year"></span>
+            Jai Shree Tiles & Sanitary.
+            All Rights Reserved.
+        </span>
+
+        <span>
+            Designed by
+            <span class="marwar">
+                Marwar Infotech
+            </span>
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING ACTION BUTTONS
+========================================================= -->
+
+<div class="float-actions">
+
+    <a
+    href="tel:+918469245000"
+    class="float-btn float-call magnetic"
+    aria-label="Call Jai Shree Tiles & Sanitary">
+
+        <i class="fa-solid fa-phone"></i>
+
+    </a>
+
+
+    <a
+    href="https://wa.me/918469245000?text=Hello%20Jai%20Shree%20Tiles%20%26%20Sanitary%2C%20I%20want%20to%20know%20about%20your%20products."
+    target="_blank"
+    class="float-btn float-whatsapp magnetic"
+    aria-label="WhatsApp Jai Shree Tiles & Sanitary">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document
+        .getElementById("preloader")
+        .classList.add("hide");
+
+    }, 1000);
+
+});
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 60){
+
+        navbar.classList.add("scrolled");
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileClose = document.getElementById("mobileClose");
+
+menuBtn.addEventListener("click", () => {
+
+    mobileMenu.classList.add("active");
+
+});
+
+mobileClose.addEventListener("click", () => {
+
+    mobileMenu.classList.remove("active");
+
+});
+
+document.querySelectorAll(".mobile-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const revealObserver =
+new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("active");
+
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+revealElements.forEach(el => {
+
+    revealObserver.observe(el);
+
+});
+
+
+/* =========================================================
+   MAGNETIC BUTTON EFFECT
+========================================================= */
+
+document.querySelectorAll(".magnetic").forEach(button => {
+
+    button.addEventListener("mousemove", function(e){
+
+        const rect =
+        this.getBoundingClientRect();
+
+        const x =
+        e.clientX - rect.left - rect.width / 2;
+
+        const y =
+        e.clientY - rect.top - rect.height / 2;
+
+        this.style.transform =
+        `translate(${x * .12}px, ${y * .12}px)`;
+
+    });
+
+    button.addEventListener("mouseleave", function(){
+
+        this.style.transform = "";
+
+    });
+
+});
+
+
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
+
+document.querySelectorAll(".faq-question")
+.forEach(question => {
+
+    question.addEventListener("click", () => {
+
+        const item =
+        question.parentElement;
+
+        document.querySelectorAll(".faq-item")
+        .forEach(other => {
+
+            if(other !== item){
+
+                other.classList.remove("active");
+
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+/* =========================================================
+   WHATSAPP CONTACT FORM
+========================================================= */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const phone =
+    document.getElementById("phone").value.trim();
+
+    const requirement =
+    document.getElementById("requirement").value.trim();
+
+    const message =
+    document.getElementById("message").value.trim();
+
+
+    const whatsappMessage =
+
+`Hello Jai Shree Tiles & Sanitary,
+
+I want to enquire about your products.
+
+Name: ${name}
+Phone: ${phone}
+Requirement: ${requirement}
+Message: ${message || "Please share product details and availability."}
+
+Thank you.`;
+
+
+    const url =
+    "https://wa.me/918469245000?text=" +
+    encodeURIComponent(whatsappMessage);
+
+
+    window.open(url, "_blank");
+
+});
+
+
+/* =========================================================
+   CURRENT YEAR
+========================================================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* =========================================================
+   SMOOTH INTERNAL LINKS
+========================================================= */
+
+document.querySelectorAll('a[href^="#"]')
+.forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        const target =
+        document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
